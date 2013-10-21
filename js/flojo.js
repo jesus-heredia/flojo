@@ -14,7 +14,7 @@ $(document).ready(function() {
   var $win = $(window),
 
   // Threshold (in pixels). The number of pixels as a minimum between our
-	// current position and the following image(s) to be load lazily.
+  // current position and the following image(s) to be load lazily.
   // 200 is the value by default, but you can use the one you like the most.
   th = 200,
 
