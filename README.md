@@ -1,8 +1,8 @@
 FLOJO.JS
 ========
 
-Flojo.js is a very lightweight jQuery script for loading images lazily. Visit:
+Flojo.js is a very lightweight jQuery script for loading images lazily.
 
-http://www.jesusheredia.info/how-to-delay-the-download-of-images-with-flojo-a-very-lightweight-jquery-script-for-loading-images-lazily
+For further information about how this script works, please go to:
 
-for further information on how it works.
+http://goo.gl/PUaoWz
