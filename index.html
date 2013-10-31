@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- saved from url=(0014)about:internet -->
+    <meta charset="utf-8">
+    <title>Starter Template for Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" />
+    <style type="text/css">
+      .img-center {
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .jumbotron { 
+			  margin-top: 20px;
+			}
+
+      .col-lg-12 p {
+			  margin-bottom: 20px;
+		  }
+
+      .col-lg-12 h4 {
+			  text-transform: uppercase;
+			}
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- Support for IE8 to understand HTML5 semantic elements and media queries -->
+    <!--[if lt IE 9] >
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.min.js" type="text/javascript"></script>
+    <![endif]-->
+    <script src="js/flojo.min.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="#">Home</a></li>
+        </ul>
+        <h3 class="text-muted">FLOJO.js</h3>
+      </div>
+      <div class="jumbotron">
+        <h1>Flojo.js, a very lightweight jQuery script for loading images lazily.</h1>
+        <p class="lead">This script instructs the browser to delay the download of images. Thus, you get the strictly necessary images and prevent the server from sending a lot of unnecessary information.</p>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <h4>This is how it works!</h4>
+          <p>This document contains a string of images placed one under another. If you attach Flojo.js to your HTML documents, the browser will be instructed to download the images as visitors scroll down/up the page. In order to fully appreciate how it works, you can use your browser's development tools.</p>
+          <img src="img/lightgray.jpg" data-src="img/brown.jpg" class="img-responsive img-center" alt="brown box" />
+          <img src="img/lightgray.jpg" data-src="img/darkgray.jpg" class="img-responsive img-center" alt="dark gray box" />
+          <img src="img/lightgray.jpg" data-src="img/darkgreen.jpg" class="img-responsive img-center" alt="dark green box" />
+          <img src="img/lightgray.jpg" data-src="img/darkorange.jpg" class="img-responsive img-center" alt="dark orange box" />
+          <img src="img/lightgray.jpg" data-src="img/darkred.jpg" class="img-responsive img-center" alt="dark red box" />
+          <img src="img/lightgray.jpg" data-src="img/gold.jpg" class="img-responsive img-center" alt="gold box" />
+          <img src="img/lightgray.jpg" data-src="img/indigo.jpg" class="img-responsive img-center" alt="indigo box" />
+          <img src="img/lightgray.jpg" data-src="img/yellow.jpg" class="img-responsive img-center" alt="light yellow box" />
+          <img src="img/lightgray.jpg" data-src="img/lime.jpg" class="img-responsive img-center" alt="lime box" />
+          <img src="img/lightgray.jpg" data-src="img/lt_turquoise.jpg" class="img-responsive img-center" alt="light turquoise box" />
+        </div>
+      </div>
+    </div><!-- End of .container -->
+  </body>
+</html>
