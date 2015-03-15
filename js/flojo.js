@@ -15,7 +15,7 @@ $(document).ready(function() {
   var $win = $(window),
 
   // Threshold (in pixels). The number of pixels as a minimum between our
-  // current position and the following image(s) to be load lazily.
+  // current position and the following image(s) to be loaded lazily.
   // 200 is the value by default, but you can use the one you like the most.
   th = 200,
 
@@ -37,7 +37,7 @@ $(document).ready(function() {
 
     }
 
-    // The window's height.
+    // The height of the window.
     var  win_height = $win.height(),
 
     // Scrolling from the top of the page.
@@ -48,7 +48,7 @@ $(document).ready(function() {
       // The height of this image.
       var img_height = $(this).height(),
 
-      // The position of this image relative to the top of the document.
+      // The position of this image from the top of the document.
           img_offset_top = $(this).offset().top;
 
       if (img_offset_top + img_height >= win_scroll_top - th &&
