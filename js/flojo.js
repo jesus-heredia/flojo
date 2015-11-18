@@ -30,7 +30,7 @@ $(document).ready(function() {
   first_time = true,
 
   // Set of images to be swapped.
-  images;
+  images = [];
 
   function flojo() {
 
@@ -47,7 +47,7 @@ $(document).ready(function() {
     }
 
     // Is there at least one image to be swapped?
-    if (images) {
+    if (images.length > 0) {
 
       // The height of the window.
       var  win_height = $win.height(),
