@@ -1,16 +1,22 @@
 /**
- * Title: Flojo.js
+ * Title: Flojo
+ * Version: 1.0.0
+ * Github repository: https://github.com/jesus-heredia/flojo
+ *
+ * What is Flojo?
+ * Flojo is a very lightweight jQuery script for loading images lazily.
+ *
  * Created by: Jesús Heredia Reboira
- * Contact: http://www.jesusheredia.info
- *
- * Flojo.js is a very lightweight jQuery script for loading images lazily.
- * https://github.com/jesus-heredia/flojo
- *
- * Licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License.
+ * Contact: http://www.jesusheredia.info/contact
+ * License: Creative Commons Attribution-ShareAlike 3.0 Unported License.
  * http://creativecommons.org/licenses/by-sa/3.0/
  */
 
 $(document).ready(function() {
+
+  // All the code should be executed in 'strict mode'.
+  "use strict";
+
   // Window object.
   var $win = $(window),
 
@@ -21,56 +27,64 @@ $(document).ready(function() {
 
   // Is this the first time that flojo() is called by another piece of code?
   // True is the value by default.
-  first_time = true;
+  first_time = true,
+
+  // Set of images to be swapped.
+  images;
 
   function flojo() {
 
-    if (first_time == false) {
+    if (first_time === false) {
 
-      var $images = $('img:not([data-src="swapped"])');
+      images = $('img:not([data-src="swapped"])');
 
-    } else if (first_time == true) {
+    } else if (first_time === true) {
 
-      var $images = $('img[data-src]');
+      images = $('img[data-src]');
 
       first_time = false;
 
     }
 
-    // The height of the window.
-    var  win_height = $win.height(),
+    // Is there at least one image to be swapped?
+    if (images) {
 
-    // Scrolling from the top of the page.
-         win_scroll_top = $win.scrollTop();
+      // The height of the window.
+      var  win_height = $win.height(),
 
-    $images.each(function() {
+      // Scrolling from the top of the page.
+      win_scroll_top = $win.scrollTop();
 
-      // The height of this image.
-      var img_height = $(this).height(),
+      images.each(function() {
 
-      // The position of this image from the top of the document.
-          img_offset_top = $(this).offset().top;
+        // The height of this image.
+        var img_height = $(this).height(),
 
-      if (img_offset_top + img_height >= win_scroll_top - th &&
-          img_offset_top <= win_height + win_scroll_top + th) {
+        // How far (in pixels) this image is from the top of the document.
+        img_offset_top = $(this).offset().top;
 
-        var new_image = new Image();
+        if (img_offset_top + img_height >= win_scroll_top - th &&
+            img_offset_top <= win_height + win_scroll_top + th) {
 
-        new_image.src = $(this).attr('data-src');
+          var new_image = new Image();
 
-        $(this).attr({
+          new_image.src = $(this).attr('data-src');
 
-          src: new_image.src,
+          $(this).attr({
 
-          'data-src': 'swapped'
+            src: new_image.src,
 
-        });
+            'data-src': 'swapped'
 
-      }
-            
-    });
+          });
 
-  }
+        }
+
+      });
+
+    }
+
+  } // End of the flojo() function.
 
   flojo();
 
