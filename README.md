@@ -1,8 +1,8 @@
-FLOJO.JS
+Flojo.js
 ========
 
 Flojo.js is a very lightweight jQuery script for loading images lazily.
 
-For further information about how this script works, please go to:
+For further information, please go to:
 
-http://goo.gl/PUaoWz
+[How does `Flojo.js` work?](http://goo.gl/PUaoWz)
